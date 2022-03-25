@@ -1,0 +1,15 @@
+.main{
+    display: grid;
+    grid-template-columns: 3.5fr 1.5fr;
+    grid-gap: 50px
+}
+.cart-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding-left: 15px;
+    padding-bottom: 50px;
+}
+.cart-details{
+    background-color: red;
+}

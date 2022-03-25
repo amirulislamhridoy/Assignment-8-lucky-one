@@ -1,0 +1,29 @@
+.cart{
+    background-color: #fff;
+    border-radius: 30px 0 30px 0;
+    padding-bottom: 20px;
+}
+.cart img{
+    border-radius: 30px 0 0 0;
+}
+.cart img{
+    width: 100%;
+}
+.cart-info{
+    margin: 0 40px;
+}
+.cart-info h3{
+    margin-top: 0;
+}
+.cart-btn{
+    padding: 7px 20px;
+    font-size: 18px;
+    border-radius: 10px 0 10px 0;
+    border: none;
+    box-shadow: 2px 2px 5px;
+    cursor: pointer;
+}
+.cart-btn:active{
+    position: relative;
+    top: 7px;
+}
