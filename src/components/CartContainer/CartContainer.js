@@ -4,15 +4,16 @@ import './CartContainer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-const CartContainer = (props) => {
+const CartContainer = ({tv, addCartDetail}) => {
     // console.log(props)
+    const {name, price, img} = tv
     return (
         <div className='cart'>
-            <img src={props.tv.img} alt="img"/>
+            <img src={img} alt="img"/>
             <div className='cart-info'>
-                <h3>{props.tv.name}</h3>
-                <h1>${props.tv.price}</h1>
-                <button className='cart-btn'>
+                <h3>{name}</h3>
+                <h1>${price}</h1>
+                <button onClick={() => addCartDetail(tv)} className='cart-btn'>
                     Add to Choice List
                     <FontAwesomeIcon className='icon' icon={faCartShopping} spin></FontAwesomeIcon>
                 </button>

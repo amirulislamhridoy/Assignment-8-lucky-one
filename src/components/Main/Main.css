@@ -11,5 +11,9 @@
     padding-bottom: 50px;
 }
 .cart-details{
-    background-color: red;
+    background-color: #fff;
+    padding: 50px;
+}
+.cart-details-head{
+    margin-bottom: 50px
 }

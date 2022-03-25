@@ -1,0 +1,25 @@
+
+.selected-tv-details{
+    width: 400px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.selected-tv img{
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: gray;
+}
+.selected-img-name{
+    display: flex;
+}
+.selected-img-name h3{
+    margin-left: 20px
+}
+.delete-btn{
+    font-size: 23px;
+    cursor: pointer;
+}
