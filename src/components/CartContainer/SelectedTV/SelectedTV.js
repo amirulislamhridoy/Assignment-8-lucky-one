@@ -1,6 +1,7 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Choose1Modal from '../../Chose1Modal/Choose1Modal';
 import './SelectedTV.css'
 
 const SelectedTV = (props) => {
@@ -19,6 +20,8 @@ const SelectedTV = (props) => {
                     </div>
                 </div>)
             }
+            {/* <button onClick={() => props.chooseOne()} className="choose-one-for">CHOOSE 1 FOR ME</button> */}
+            <Choose1Modal choose={props.choose} chooseOne={props.chooseOne}></Choose1Modal>
         </div>
     );
 };

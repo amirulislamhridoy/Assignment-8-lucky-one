@@ -5,16 +5,15 @@ import './Main.css'
 
 const Main = () => {
     const [tvs, setTvs] = useState([])
+    const [datas, setDatas] = useState([])
     useEffect( () => {
         fetch('fakeData.json')
         .then(res => res.json())
         .then(data => setTvs(data))
     }, [])
 
-    const [datas, setDatas] = useState([])
     const addCartDetail = (cartDetails) => {
         const a = datas.find(data => data.id === cartDetails.id)
-
         if(datas.length === 4){
             alert('You can choose 4 items.')
         }else if(a){
@@ -24,10 +23,24 @@ const Main = () => {
             setDatas([...datas, cartDetails])
         }
     }
-
     const deleteFunction = (id) => {
         const rest = datas.filter(data => data.id !== id)
         setDatas(rest)
+    }
+
+    const [choose, setChoose] = useState([])
+    // console.log(choose)
+    const chooseOne = () => {
+        const randomDigit = Math.ceil(Math.random() * 10)
+        const match = datas.find(data => data.id == randomDigit) 
+        if(match){
+            // setDatas([match])
+            setChoose([match])
+        }else{
+            // setDatas([datas[0]])
+            setChoose([datas[0]])
+        }
+        // console.log(choose)
     }
     return (
         <div className='main'>
@@ -38,7 +51,7 @@ const Main = () => {
             </div>
             <div className='cart-details'>
                 <h1 className='cart-details-head'>Selected Smart TV</h1>
-                <SelectedTV datas={datas} deleteFunction={deleteFunction}></SelectedTV>
+                <SelectedTV choose={choose} chooseOne={chooseOne} datas={datas} deleteFunction={deleteFunction}></SelectedTV>
             </div>
             
         </div>
