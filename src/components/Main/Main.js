@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CartContainer from '../CartContainer/CartContainer';
 import SelectedTV from '../CartContainer/SelectedTV/SelectedTV';
+import { getLocalStorage, setLocalSTorage, removeLocalStorage } from '../LocalStorage/LocalStorage';
 import './Main.css'
 
 const Main = () => {
@@ -11,23 +12,13 @@ const Main = () => {
         .then(res => res.json())
         .then(data => setTvs(data))
     }, [])
-
-    const addCartDetail = (cartDetails) => {
-        const a = datas.find(data => data.id === cartDetails.id)
-        if(datas.length === 4){
-            alert('You can choose 4 TV.')
-        }else if(a){
-            alert('You are already added.')
-        }
-        else{
-            setDatas([...datas, cartDetails])
-        }
-    }
     const deleteFunction = (id) => {
         const rest = datas.filter(data => data.id !== id)
+        const match = datas.find(data => data.id === id)
+        // console.log(rest)
+        removeLocalStorage(match.id)
         setDatas(rest)
     }
-
     const [choose, setChoose] = useState([])
     // console.log(choose)
     const chooseOne = () => {
@@ -42,6 +33,30 @@ const Main = () => {
     const chooseAgain = () => {
         setDatas([])
     }
+    const addCartDetail = (cartDetails) => {
+        const a = datas.find(data => data.id === cartDetails.id)
+        if(datas.length === 4){
+            alert('You can choose 4 TV.')
+        }else if(a){
+            alert('You are already added.')
+        }
+        else{
+            setDatas([...datas, cartDetails])
+            setLocalSTorage(cartDetails)
+        }
+    }
+    useEffect(() => {
+        const shopping = getLocalStorage()
+        let matchElement = []
+        for(const id in shopping){
+        const check = tvs.find(tv => tv.id === id)
+        if(check){
+            matchElement.push(check)
+        }
+    }
+    setDatas(matchElement)
+    }, [tvs])
+
     return (
         <div className='main'>
             <div className='cart-container'>
