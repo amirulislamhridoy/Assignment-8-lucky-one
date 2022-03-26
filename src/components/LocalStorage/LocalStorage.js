@@ -23,4 +23,8 @@ const removeLocalStorage = id => {
     localStorage.setItem('shopping-cart', JSON.stringify(exists))
 }
 
-export {getLocalStorage, setLocalSTorage, removeLocalStorage}
+const clearLocalStorage = () => {
+    localStorage.clear()
+}
+
+export {getLocalStorage, setLocalSTorage, removeLocalStorage, clearLocalStorage}

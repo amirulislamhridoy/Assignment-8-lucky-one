@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CartContainer from '../CartContainer/CartContainer';
 import SelectedTV from '../CartContainer/SelectedTV/SelectedTV';
-import { getLocalStorage, setLocalSTorage, removeLocalStorage } from '../LocalStorage/LocalStorage';
+import { getLocalStorage, setLocalSTorage, removeLocalStorage, clearLocalStorage } from '../LocalStorage/LocalStorage';
 import './Main.css'
 
 const Main = () => {
@@ -32,6 +32,7 @@ const Main = () => {
     }
     const chooseAgain = () => {
         setDatas([])
+        clearLocalStorage()
     }
     const addCartDetail = (cartDetails) => {
         const a = datas.find(data => data.id === cartDetails.id)
