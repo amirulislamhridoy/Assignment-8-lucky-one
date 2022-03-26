@@ -1,6 +1,6 @@
 .main{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 1.5fr;
     grid-gap: 50px
 }
 .cart-container{
@@ -16,4 +16,17 @@
 }
 .cart-details-head{
     margin-bottom: 50px
+}
+
+@media screen and (max-width: 420px){
+    .main{
+        grid-template-columns: auto;
+    }
+    .cart-container{
+        grid-template-columns: auto;
+        padding: 5px;
+    }
+    .cart-details{
+        padding: 5px;
+    }
 }

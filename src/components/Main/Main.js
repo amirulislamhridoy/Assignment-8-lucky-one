@@ -34,13 +34,10 @@ const Main = () => {
         const randomDigit = Math.ceil(Math.random() * 10)
         const match = datas.find(data => data.id == randomDigit) 
         if(match){
-            // setDatas([match])
             setChoose([match])
         }else{
-            // setDatas([datas[0]])
             setChoose([datas[0]])
         }
-        // console.log(choose)
     }
     return (
         <div className='main'>
