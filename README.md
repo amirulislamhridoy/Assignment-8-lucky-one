@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# lucky-one-man
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [My repo link] 
+(https://github.com/Programming-Hero-Web-Course4/lucky-one-amirulislamhridoy.git).
 
 ## Available Scripts
 
