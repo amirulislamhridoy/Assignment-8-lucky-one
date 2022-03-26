@@ -22,6 +22,7 @@ const SelectedTV = (props) => {
             }
             {/* <button onClick={() => props.chooseOne()} className="choose-one-for">CHOOSE 1 FOR ME</button> */}
             <Choose1Modal choose={props.choose} chooseOne={props.chooseOne}></Choose1Modal>
+            <button onClick={props.chooseAgain} className='choose-again-btn'>CHOOSE AGAIN</button>
         </div>
     );
 };

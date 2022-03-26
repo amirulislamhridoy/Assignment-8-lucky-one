@@ -1,7 +1,8 @@
 .main{
     display: grid;
     grid-template-columns: 4fr 1.5fr;
-    grid-gap: 50px
+    grid-gap: 50px;
+    position: relative;
 }
 .cart-container{
     display: grid;
@@ -10,15 +11,21 @@
     padding-left: 15px;
     padding-bottom: 50px;
 }
+.cart-details-parent{
+    height: 100%;
+    background-color: #fff;
+}
 .cart-details{
     background-color: #fff;
     padding: 50px;
+    position: sticky;
+    top: 0;
 }
 .cart-details-head{
     margin-bottom: 50px
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 768px){
     .main{
         grid-template-columns: auto;
     }

@@ -30,7 +30,7 @@ const Choose1Modal = (props) => {
       }
     return (
         <div>
-            <button onClick={a} className='choose-one-for'>Choose One For Me</button>
+            <button onClick={a} className='choose-one-for'>CHOOSE ONE FOR ME</button>
           <Modal
             isOpen={modalIsOpen}
             // onAfterOpen={afterOpenModal}

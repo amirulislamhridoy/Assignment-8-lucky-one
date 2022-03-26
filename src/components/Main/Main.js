@@ -15,7 +15,7 @@ const Main = () => {
     const addCartDetail = (cartDetails) => {
         const a = datas.find(data => data.id === cartDetails.id)
         if(datas.length === 4){
-            alert('You can choose 4 items.')
+            alert('You can choose 4 TV.')
         }else if(a){
             alert('You are already added.')
         }
@@ -39,6 +39,9 @@ const Main = () => {
             setChoose([datas[0]])
         }
     }
+    const chooseAgain = () => {
+        setDatas([])
+    }
     return (
         <div className='main'>
             <div className='cart-container'>
@@ -46,9 +49,11 @@ const Main = () => {
                     tvs.map(tv => <CartContainer addCartDetail={addCartDetail} tv={tv} key={tv.id}></CartContainer>)
                 }
             </div>
-            <div className='cart-details'>
-                <h1 className='cart-details-head'>Selected Smart TV</h1>
-                <SelectedTV choose={choose} chooseOne={chooseOne} datas={datas} deleteFunction={deleteFunction}></SelectedTV>
+            <div className='cart-details-parent'>
+                <div className='cart-details'>
+                    <h1 className='cart-details-head'>Selected Smart TV</h1>
+                    <SelectedTV choose={choose} chooseOne={chooseOne} datas={datas} deleteFunction={deleteFunction} chooseAgain={chooseAgain}></SelectedTV>
+                </div>
             </div>
             
         </div>
