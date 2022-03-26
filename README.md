@@ -1,7 +1,7 @@
 # lucky-one-man
 
-## [My repo link](https://github.com/Programming-Hero-Web-Course4/lucky-one-amirulislamhridoy.git).
-click here to visit my repo: [https://github.com/Programming-Hero-Web-Course4/lucky-one-amirulislamhridoy.git](https://github.com/Programming-Hero-Web-Course4/lucky-one-amirulislamhridoy.git)
+## [My repo live site](https://bejewelled-custard-7de940.netlify.app/).
+click here to visit my live site: [https://bejewelled-custard-7de940.netlify.app/](https://bejewelled-custard-7de940.netlify.app/)
 
 ## Available Scripts
 
