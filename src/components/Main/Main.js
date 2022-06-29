@@ -22,13 +22,8 @@ const Main = () => {
     const [choose, setChoose] = useState([])
     // console.log(choose)
     const chooseOne = () => {
-        const randomDigit = Math.ceil(Math.random() * 10)
-        const match = datas.find(data => data.id == randomDigit) 
-        if(match){
-            setChoose([match])
-        }else{
-            setChoose([datas[0]])
-        }
+        const randomDigit = Math.floor(Math.random() * 4)
+        setChoose([datas[randomDigit]])
     }
     const chooseAgain = () => {
         setDatas([])
